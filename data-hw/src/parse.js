@@ -3,8 +3,8 @@
 let filesystem = require('fs');
 
 
-function read(file) {
-  let contentsOfFile = filesystem.readFileSync(file);
+module.exports = function read(path) {
+  let contentsOfFile = filesystem.readFileSync(path);
   let readFile = contentsOfFile.toString();
   let rowInfo = readFile.split('\n');
 
@@ -13,6 +13,6 @@ function read(file) {
   });
 
   return movingData;
-}
-
-// read('./traffic-data/simple_data/moving_jan_2016.csv');
+};
+// console.log(module.exports('./moving_jan_2016.csv'));
+ //read('./traffic-data/simple_data/moving_jan_2016.csv');
