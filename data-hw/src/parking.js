@@ -11,7 +11,7 @@
      //
 
      //making a loop ".forEach"
-     parking.foreach( function propertyItem(row) {
+     parking.foreach(function propertyItem(row) {
 
        //call/run/execute the function
        //most common violation type for parking
@@ -25,6 +25,6 @@
           //if freq defined add 1
         }frequency[row[9]] = frequency[row[9]]++;
        //this should give back a violation type and count
-     }
+     });
 
-});
+}
